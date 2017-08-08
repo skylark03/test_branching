@@ -31,3 +31,11 @@ jobs:
       - TASK:
         - script: echo "Hello from j4"
         - script: cat /build/IN/my_state/version.json
+  
+  - name: j5_branch
+    type: runSh
+    steps:
+      - IN: my_state_branch
+      - TASK:
+        - script: echo "Hello from j5"
+        - script: cat /build/IN/my_state/version.json
