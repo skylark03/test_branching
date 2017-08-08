@@ -7,3 +7,11 @@ jobs:
         - script: echo versionName=$(date) > $JOB_DIR/my_state_branch.env
         - script: echo foo="bar" >> $JOB_DIR/my_state_branch.env
       - OUT: my_state_branch
+      
+  - name: j2_branch
+    type: runSh
+    steps:
+      - TASK:
+        - script: echo "Hello from j2"
+        - script: echo versionName=$(date) > $JOB_DIR/my_state_branch.env
+      - OUT: my_state_branch
