@@ -1,9 +1,9 @@
 jobs:
-  - name: j1
+  - name: j1_branch
     type: runSh
     steps:
       - TASK:
         - script: echo "Hello from j1"
-        - script: echo versionName=$(date) > $JOB_DIR/my_state.env
-        - script: echo foo="bar" >> $JOB_DIR/my_state.env
-      - OUT: my_state
+        - script: echo versionName=$(date) > $JOB_DIR/my_state_branch.env
+        - script: echo foo="bar" >> $JOB_DIR/my_state_branch.env
+      - OUT: my_state_branch
