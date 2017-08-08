@@ -15,3 +15,11 @@ jobs:
         - script: echo "Hello from j2"
         - script: echo versionName=$(date) > $JOB_DIR/my_state_branch.env
       - OUT: my_state_branch
+
+  - name: j3_branch
+    type: runSh
+    steps:
+      - IN: my_state_branch
+      - TASK:
+        - script: echo "Hello from j3"
+        - script: cat /build/IN/my_state/version.json
