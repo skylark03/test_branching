@@ -63,3 +63,11 @@ jobs:
       - TASK:
         - script: echo "Hello from j8"
         - script: cat /build/IN/my_state/version.json
+        
+  - name: j9_branch
+    type: runSh
+    steps:
+      - IN: my_state_branch
+      - TASK:
+        - script: echo "Hello from j9"
+        - script: cat /build/IN/my_state/version.json
